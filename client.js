@@ -59,6 +59,13 @@ function calculateTotalMonthly() {
         style: 'currency',
         currency: 'USD',
     }).format(totalMonthly);
+
+    // Apply red background if the total monthly exceeds $20,000
+    if (totalMonthly > 20000) {
+        totalMonthlyElement.style.backgroundColor = 'red';
+    } else {
+        totalMonthlyElement.style.backgroundColor = 'initial';
+    }
 }
 
 function removeRow(event) {

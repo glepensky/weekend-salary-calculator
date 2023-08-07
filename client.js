@@ -29,20 +29,7 @@ function submitForm(event) {
     <td><button onClick="removeRow(event)">Delete</button></td>
     </tr>   
     `;
-    // currentIndex += 1
 
-    // if (tempVal > highTemp) {
-    //     highTemp = tempVal;
-    //     document.querySelector("#high-temp").innerHTML = highTemp
-    //     if (tempVal > tooHigh) {
-    //         document.querySelector("#high-temp").style.backgroundColor = "red"
-    //     }else if(tempVal <= tooHigh){
-    //     }else {
-    //         console.log("Something wrong in color assignment");
-    //     }
-    // }else{
-    //     console.log("something went wrong");
-    // }
 }
 
 function removeRow(event){

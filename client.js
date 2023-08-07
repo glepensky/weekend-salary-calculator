@@ -1,8 +1,9 @@
+// function to Add Employee
 function submitForm(event) {
     event.preventDefault();
     console.log('submit Form');
 
-    // Find the input field and assign the value to our variable.
+    // Find the input field and assign the value to variable
     let firstNameVal = document.querySelector('#firstName-input').value;
     let lastNameVal = document.querySelector('#lastName-input').value;
     let idVal = document.querySelector('#idNumber-input').value;
@@ -43,6 +44,7 @@ function submitForm(event) {
     calculateTotalMonthly();
 }
 
+// function to calculate monthly total from employee's annual salaries 
 function calculateTotalMonthly() {
     let annualSalaryElements = document.querySelectorAll('#employeeData tbody tr td:nth-child(5)');
     let totalAnnual = 0;

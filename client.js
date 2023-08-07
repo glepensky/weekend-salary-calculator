@@ -3,11 +3,11 @@ function submitForm(event) {
     console.log('submit Form');
 
     // Find the input field and assign the value to our variable.
-    let firstNameVal = document.querySelector('#firstName-input').value
-    let lastNameVal = document.querySelector('#lastName-input').value
-    let idVal = document.querySelector('#idNumber-input').value
-    let titleVal = document.querySelector('#title-input').value
-    let annualSalaryVal = document.querySelector('#annualSalary-input').value
+    let firstNameVal = document.querySelector('#firstName-input').value;
+    let lastNameVal = document.querySelector('#lastName-input').value;
+    let idVal = document.querySelector('#idNumber-input').value;
+    let titleVal = document.querySelector('#title-input').value;
+    let annualSalaryVal = document.querySelector('#annualSalary-input').value;
 
     // Check if the input for annualSalaryVal is valid
     if (isNaN(parseFloat(annualSalaryVal))) {
@@ -33,11 +33,13 @@ function submitForm(event) {
     </tr>   
     `;
 
-    calculateTotalMonthly();
-}
+    // Clear the input fields after submission
+    document.querySelector('#firstName-input').value = '';
+    document.querySelector('#lastName-input').value = '';
+    document.querySelector('#idNumber-input').value = '';
+    document.querySelector('#title-input').value = '';
+    document.querySelector('#annualSalary-input').value = '';
 
-function removeRow(event) {
-    event.target.closest('tr').remove();
     calculateTotalMonthly();
 }
 
@@ -57,4 +59,9 @@ function calculateTotalMonthly() {
         style: 'currency',
         currency: 'USD',
     }).format(totalMonthly);
+}
+
+function removeRow(event) {
+    event.target.closest('tr').remove();
+    calculateTotalMonthly();
 }

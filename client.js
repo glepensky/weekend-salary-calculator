@@ -1,4 +1,5 @@
-// function to Add Employee
+// function to Add an Employee
+// 
 function submitForm(event) {
     event.preventDefault();
     console.log('submit Form');
